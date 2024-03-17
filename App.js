@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image, TextInput, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={require('./assets/favicon.png')}/>
+      <Text>Seja bem vindo</Text>
+      <TextInput placeholder='Digite seu e-mail' style={styles.txtInput}/>
+      <Button title='ENTRAR' />
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +19,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    gap:20
   },
+  txtInput:{
+    width:'80%',
+    backgroundColor:'#808080',
+    height:40,
+    borderRadius:20
+  }
 });
